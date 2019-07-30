@@ -6,6 +6,8 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.decimal :price, null: false, precision: 15, scale: 2
 
       t.timestamps
+
+      t.index :title, unique: true
     end
   end
 end

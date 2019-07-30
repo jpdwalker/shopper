@@ -32,7 +32,7 @@ PRODUCTS_COUNT.times do
   if rand > VARIANTS_WEIGHT
     num_variants = 1 + rand(MAX_VARIANTS)
     num_variants.times do
-      product.variants.build(
+      @product_variants.build(
         title: rand > VARIANTS_WEIGHT ? Faker::Commerce.color : Faker::Commerce.material,
         price: Faker::Commerce.price
       )
